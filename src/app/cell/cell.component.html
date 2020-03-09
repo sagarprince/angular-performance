@@ -1,0 +1,9 @@
+<div class="cell" (click)="onClick()" [ngClass]="result | CellResult">
+    <ng-container *ngIf="result == -1; else elseBlock">
+        {{num}} : 00
+    </ng-container>
+    <ng-template #elseBlock>
+        <span>{{result}}</span>
+        <span>{{ result | CellResult}}</span>
+    </ng-template>
+</div>
